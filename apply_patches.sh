@@ -34,7 +34,7 @@ cp -f $PATH_SRC_REPO/cpp/computepipe/tests/runner/graph/stubgraph/Android.bp \
 cp -f -r $PATH_SRC_REPO/cpp/computepipe/tests/runner/graph/stubgraph/riscv64/ \
          $PATH_DES_REPO/cpp/computepipe/tests/runner/graph/stubgraph/
 
-# prebuilts/clang/host/linux-x8
+# prebuilts/clang/host/linux-x86
 PATH_REPO=prebuilts/clang/host/linux-x86
 PATH_DES_REPO=$TOP/$PATH_REPO
 PATH_SRC_REPO=$TOP_PATCHES/$PATH_REPO
