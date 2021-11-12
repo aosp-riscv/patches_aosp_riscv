@@ -33,3 +33,28 @@ cp -f $PATH_SRC_REPO/cpp/computepipe/tests/runner/graph/stubgraph/Android.bp \
       $PATH_DES_REPO/cpp/computepipe/tests/runner/graph/stubgraph/Android.bp
 cp -f -r $PATH_SRC_REPO/cpp/computepipe/tests/runner/graph/stubgraph/riscv64/ \
          $PATH_DES_REPO/cpp/computepipe/tests/runner/graph/stubgraph/
+
+# prebuilts/clang/host/linux-x8
+PATH_REPO=prebuilts/clang/host/linux-x86
+PATH_DES_REPO=$TOP/$PATH_REPO
+PATH_SRC_REPO=$TOP_PATCHES/$PATH_REPO
+
+cp -f $PATH_SRC_REPO/Android.bp \
+      $PATH_DES_REPO/Android.bp
+cp -f $PATH_SRC_REPO/soong/clangprebuilts.go \
+      $PATH_DES_REPO/soong/clangprebuilts.go
+
+PATH_DES_REPO=$TOP/$PATH_REPO/clang-r416183b1/lib64/clang/12.0.7/lib/linux
+PATH_SRC_REPO=$TOP_PATCHES/$PATH_REPO/clang-r416183b1/lib64/clang/12.0.7/lib/linux
+
+
+cp -f $PATH_SRC_REPO/libclang_rt.asan-riscv64-android.so $PATH_DES_REPO/
+cp -f $PATH_SRC_REPO/libclang_rt.builtins-riscv64-android.a $PATH_DES_REPO/
+cp -f $PATH_SRC_REPO/libclang_rt.fuzzer-riscv64-android.a $PATH_DES_REPO/
+cp -f $PATH_SRC_REPO/libclang_rt.ubsan_minimal-riscv64-android.a $PATH_DES_REPO/
+cp -f $PATH_SRC_REPO/libclang_rt.ubsan_minimal-riscv64-android.a.syms $PATH_DES_REPO/
+cp -f $PATH_SRC_REPO/libclang_rt.ubsan_minimal-riscv64-android.so $PATH_DES_REPO/
+cp -f $PATH_SRC_REPO/libclang_rt.ubsan_standalone-riscv64-android.so $PATH_DES_REPO/
+
+cp -f -r $PATH_SRC_REPO/riscv64/ $PATH_DES_REPO/
+
