@@ -102,3 +102,11 @@ PATH_DES_REPO=$TOP/$PATH_REPO/mainline/tzdata/apex
 PATH_SRC_REPO=$TOP_PATCHES/$PATH_REPO/mainline/tzdata/apex
 cp -f $PATH_SRC_REPO/Android.bp $PATH_DES_REPO/
 cp -f $PATH_SRC_REPO/com.android.tzdata-riscv64.apex $PATH_DES_REPO/
+
+# packages/modules/ArtPrebuilt
+PATH_REPO=packages/modules/ArtPrebuilt
+PATH_DES_REPO=$TOP/$PATH_REPO
+PATH_SRC_REPO=$TOP_PATCHES/$PATH_REPO
+cp -f $PATH_SRC_REPO/Android.bp $PATH_DES_REPO/
+cp -f $PATH_SRC_REPO/com.android.art-riscv64.apex $PATH_DES_REPO/
+cp -f $PATH_SRC_REPO/com.android.art.debug-riscv64.apex $PATH_DES_REPO/
